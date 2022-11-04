@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <EEPROM.h>
 #include <ezButton.h>
+#include <SevenSegmentDisplay.h>
 
 /********************************************************/
 /* Notes                                                */
@@ -98,6 +99,16 @@ bool presets[PresetCount][FxCount] = {false};
 /********************************************************/
 /* Display                                              */
 /********************************************************/
+SevenSegmentDisplay sevenSegmentDisplay(
+    DisplaySegAPin,
+    DisplaySegBPin,
+    DisplaySegCPin,
+    DisplaySegDPin,
+    DisplaySegEPin,
+    DisplaySegFPin,
+    DisplaySeggPin,
+    DisplaySegDotPin,
+    true);
 
 /********************************************************/
 /* Current state                                        */
@@ -112,12 +123,14 @@ int currentPreset = 1;
 
 void displayDot(bool enable)
 {
-  digitalWrite(DisplaySegDotPin, enable ? HIGH : LOW);
+  sevenSegmentDisplay.displayDecimalPoint(enable);
 }
 
 void displayNumber(int number)
 {
-  // TODO : Segment lib is too heavy
+  char c;
+  itoa(number, &c, 10);
+  sevenSegmentDisplay.displayCharacter(c);
 }
 
 void setFxStatus(int fxId, bool enable)
@@ -170,16 +183,6 @@ void setup()
     pinMode(fxControls[i].in, OUTPUT);
     pinMode(fxControls[i].out, OUTPUT);
   }
-
-  // Setup display pins to output
-  pinMode(DisplaySegAPin, OUTPUT);
-  pinMode(DisplaySegBPin, OUTPUT);
-  pinMode(DisplaySegCPin, OUTPUT);
-  pinMode(DisplaySegDPin, OUTPUT);
-  pinMode(DisplaySegEPin, OUTPUT);
-  pinMode(DisplaySegFPin, OUTPUT);
-  pinMode(DisplaySeggPin, OUTPUT);
-  pinMode(DisplaySegDotPin, OUTPUT);
 
   // Load data from eeprom
   EEPROM.get(PresetsAddress, presets);
