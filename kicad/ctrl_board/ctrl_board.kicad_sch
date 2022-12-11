@@ -753,7 +753,7 @@
     (uuid 09c6c498-5837-4f03-b640-93be131ca3ba)
     (property "Reference" "R4" (id 0) (at 111.76 97.79 90))
     (property "Value" "470" (id 1) (at 111.76 100.33 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 111.76 105.918 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (id 2) (at 111.76 105.918 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 111.76 104.14 0)
@@ -816,7 +816,7 @@
     (uuid 3abc7555-7cbd-403a-bdee-12a76f17b279)
     (property "Reference" "R3" (id 0) (at 111.76 87.63 90))
     (property "Value" "470" (id 1) (at 111.76 90.17 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 111.76 95.758 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (id 2) (at 111.76 95.758 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 111.76 93.98 0)
@@ -884,7 +884,7 @@
   (symbol (lib_id "power:GND") (at 36.83 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 88d04aa0-a5f1-43df-9656-fb4c3b50e96e)
-    (property "Reference" "#PWR?" (id 0) (at 36.83 78.74 0)
+    (property "Reference" "#PWR0103" (id 0) (at 36.83 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 36.83 77.47 0))
@@ -915,7 +915,7 @@
   (symbol (lib_id "power:VCC") (at 36.83 46.99 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid d129d375-8b04-439f-a139-6bf5f17a61f1)
-    (property "Reference" "#PWR?" (id 0) (at 36.83 50.8 0)
+    (property "Reference" "#PWR0102" (id 0) (at 36.83 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (id 1) (at 36.83 41.91 0))
@@ -933,7 +933,7 @@
     (uuid daa676a9-1e0f-4dca-88a2-e0227a6671aa)
     (property "Reference" "R2" (id 0) (at 111.76 77.47 90))
     (property "Value" "470" (id 1) (at 111.76 80.01 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 111.76 85.598 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (id 2) (at 111.76 85.598 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 111.76 83.82 0)
@@ -961,7 +961,7 @@
   (symbol (lib_id "power:GND") (at 116.84 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid facb8cff-e8e4-40a5-afc4-c266ee63af67)
-    (property "Reference" "#PWR?" (id 0) (at 116.84 113.03 0)
+    (property "Reference" "#PWR0101" (id 0) (at 116.84 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 116.84 111.76 0))
@@ -982,14 +982,14 @@
     (path "/1eb1d3cf-617f-44e5-8efe-3750caac106f"
       (reference "#PWR01") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/88d04aa0-a5f1-43df-9656-fb4c3b50e96e"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    (path "/facb8cff-e8e4-40a5-afc4-c266ee63af67"
+      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
     )
     (path "/d129d375-8b04-439f-a139-6bf5f17a61f1"
-      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
+      (reference "#PWR0102") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/facb8cff-e8e4-40a5-afc4-c266ee63af67"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    (path "/88d04aa0-a5f1-43df-9656-fb4c3b50e96e"
+      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
     (path "/bf4311fa-861b-4f3e-b3fb-8fd1e4798c48"
       (reference "D2") (unit 1) (value "LED") (footprint "LED_THT:LED_D3.0mm")
@@ -1004,13 +1004,13 @@
       (reference "J1") (unit 1) (value "Conn_Ctrl") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical")
     )
     (path "/daa676a9-1e0f-4dca-88a2-e0227a6671aa"
-      (reference "R2") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R2") (unit 1) (value "470") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
     (path "/3abc7555-7cbd-403a-bdee-12a76f17b279"
-      (reference "R3") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R3") (unit 1) (value "470") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
     (path "/09c6c498-5837-4f03-b640-93be131ca3ba"
-      (reference "R4") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R4") (unit 1) (value "470") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
     (path "/0bb927d2-4731-4b52-84c0-dd32b78965f9"
       (reference "SW1") (unit 1) (value "SW1") (footprint "BDMLibrary:SPDT Momentum")
